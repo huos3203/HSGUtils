@@ -13,15 +13,30 @@ class hsg_lib_UtilsTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+//        let httpstub = InstallHTTPStubs()
+//        httpstub.fileToJSON(plist: "文件路径")
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    ///访问json数据
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        InstallHTTPStubs().installImageStub(2, 3)
+//        Alamofire.request("https://www.baidu.com").response { (defaultRessponse) in
+//            //
+//            let str = defaultRessponse.response?.url?.absoluteString
+//            print(str)
+//        }
+    }
+    
+    //返回字典
+    func testJSONData()
+    {
+        let jsonData = InstallHTTPStubs().fileToJSON(plist: "0.plist")
+        let jsonStr = String.init(data: jsonData, encoding: .utf8)
     }
 
     func testPerformanceExample() {

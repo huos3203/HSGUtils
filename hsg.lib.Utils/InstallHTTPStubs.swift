@@ -8,7 +8,7 @@
 
 import UIKit
 import OHHTTPStubs
-
+import HandyJSON
 /**
  得到的
  
@@ -59,29 +59,37 @@ public class InstallHTTPStubs: NSObject
     
     
     //模拟data
-    func installJSONDataStub(plist:String)
+    public func installJSONDataStub(plist:String)
     {
         //plist转为JSON数据
-        let jsonData = fileToJSON(plist: plist)
+        let imagePath = OHPathForFile("0.plist", type(of:self))
+        let jsonData = fileToJSON(plist: imagePath!)
         
         //封装响应包
-        
+        installStubs = OHHTTPStubs.stubRequests(passingTest: { (request:URLRequest) -> Bool in
+            //
+            return request.url?.host == ""
+        }, withStubResponse: { (request:URLRequest) -> OHHTTPStubsResponse in
+            //
+            let response = OHHTTPStubsResponse.init(jsonObject: jsonData, statusCode: 200, headers: ["Content-Type":"application/json"])
+            return response
+        })
         
     }
     
     
-    func fileToJSON(plist:String)->Data
+    public func fileToJSON(plist:String)->Data
     {
         //
-        let filePath = OHPathForFile(plist, type(of:self))
-        let array = NSArray.init(contentsOfFile: filePath!)
+        let filePath = plist//OHPathForFile(plist, type(of:self))
+        let array = NSArray.init(contentsOfFile: filePath)
          _ = [:]
         array?.enumerateObjects({ (obj, index, bool) in
             //
             
             
         })
-        let dic = NSDictionary(contentsOfFile: filePath!) as! Dictionary<NSObject,Any>
+        let dic = array?[0]//NSDictionary(contentsOfFile: filePath) as! Dictionary<NSObject,Any>
         var jsonData = Data()
         if JSONSerialization.isValidJSONObject(dic)
         {

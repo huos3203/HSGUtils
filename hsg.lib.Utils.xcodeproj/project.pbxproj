@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		841BE83A21A3F3DA006EB151 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841BE83921A3F3DA006EB151 /* APIClient.swift */; };
 		848B40E021A4226D00E6B1B9 /* InstallHTTPStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B40DF21A4226D00E6B1B9 /* InstallHTTPStubs.swift */; };
+		848B414421A430E900E6B1B9 /* 0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848B414321A430E900E6B1B9 /* 0.plist */; };
 		84D9E60D219AD5F7000A39D0 /* hsg_lib_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D9E603219AD5F0000A39D0 /* hsg_lib_Utils.framework */; };
 		84D9E612219AD5F8000A39D0 /* hsg_lib_UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9E611219AD5F8000A39D0 /* hsg_lib_UtilsTests.swift */; };
 		84D9E614219AD5F8000A39D0 /* hsg_lib_Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D9E606219AD5F0000A39D0 /* hsg_lib_Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 		32696444E1E4A4BC047F5E08 /* Pods-hsg.lib.Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hsg.lib.Utils.debug.xcconfig"; path = "../../../../Pods/Target Support Files/Pods-hsg.lib.Utils/Pods-hsg.lib.Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		841BE83921A3F3DA006EB151 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		848B40DF21A4226D00E6B1B9 /* InstallHTTPStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstallHTTPStubs.swift; sourceTree = "<group>"; };
+		848B414321A430E900E6B1B9 /* 0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 0.plist; sourceTree = "<group>"; };
 		84D9E603219AD5F0000A39D0 /* hsg_lib_Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = hsg_lib_Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D9E606219AD5F0000A39D0 /* hsg_lib_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hsg_lib_Utils.h; sourceTree = "<group>"; };
 		84D9E607219AD5F0000A39D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				84D9E606219AD5F0000A39D0 /* hsg_lib_Utils.h */,
 				84D9E607219AD5F0000A39D0 /* Info.plist */,
+				848B414321A430E900E6B1B9 /* 0.plist */,
 				841BE83921A3F3DA006EB151 /* APIClient.swift */,
 				848B40DF21A4226D00E6B1B9 /* InstallHTTPStubs.swift */,
 			);
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848B414421A430E900E6B1B9 /* 0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
