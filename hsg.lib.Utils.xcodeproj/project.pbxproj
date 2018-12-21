@@ -33,6 +33,8 @@
 		841BE83921A3F3DA006EB151 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		848B40DF21A4226D00E6B1B9 /* InstallHTTPStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstallHTTPStubs.swift; sourceTree = "<group>"; };
 		848B414321A430E900E6B1B9 /* 0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 0.plist; sourceTree = "<group>"; };
+		84BE29DB21CD018F004817F4 /* GetComInspectTaskList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetComInspectTaskList.json; sourceTree = "<group>"; };
+		84BE29DC21CD01E3004817F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84D9E603219AD5F0000A39D0 /* hsg_lib_Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = hsg_lib_Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D9E606219AD5F0000A39D0 /* hsg_lib_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hsg_lib_Utils.h; sourceTree = "<group>"; };
 		84D9E607219AD5F0000A39D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84BE29DA21CD0164004817F4 /* JHAPI */ = {
+			isa = PBXGroup;
+			children = (
+				84BE29DB21CD018F004817F4 /* GetComInspectTaskList.json */,
+				84BE29DC21CD01E3004817F4 /* README.md */,
+			);
+			path = JHAPI;
+			sourceTree = "<group>";
+		};
 		84D9E5F9219AD5EF000A39D0 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +97,7 @@
 		84D9E605219AD5F0000A39D0 /* hsg.lib.Utils */ = {
 			isa = PBXGroup;
 			children = (
+				84BE29DA21CD0164004817F4 /* JHAPI */,
 				8412AABB21A7012F00D36C28 /* 0.json */,
 				84D9E606219AD5F0000A39D0 /* hsg_lib_Utils.h */,
 				84D9E607219AD5F0000A39D0 /* Info.plist */,
