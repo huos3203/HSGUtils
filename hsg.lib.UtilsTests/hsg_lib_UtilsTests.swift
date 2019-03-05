@@ -38,7 +38,7 @@ class hsg_lib_UtilsTests: XCTestCase {
     {
         let jsonData = InstallHTTPStubs().fileToJSON(plist: "0.plist")
         let jsonStr = String.init(data: jsonData, encoding: .utf8)
-        HandyJSON
+//        HandyJSON
     }
 
     func testPerformanceExample() {

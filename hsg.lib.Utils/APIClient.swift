@@ -8,7 +8,7 @@
 
 import Foundation
 
-let userInfo = ["onevcat": "123"]
+let userInfo = ["1": "123"]
 
 public struct APIClient {
     
