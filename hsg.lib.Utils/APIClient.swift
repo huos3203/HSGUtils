@@ -21,12 +21,12 @@ public struct APIClient {
             print("Are we there yet?")
             DispatchQueue.main.async {
 //                self.imageView.image = image
-                if userName.characters.count == 0 {
+                if userName.count == 0 {
                     completionHandler?(false, .EmptyUserName)
                     return
                 }
                 
-                if pwd.characters.count == 0 {
+                if pwd.count == 0 {
                     completionHandler?(false, .EmptyPassword)
                     return
                 }
