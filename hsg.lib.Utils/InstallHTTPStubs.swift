@@ -13,7 +13,7 @@ import HandyJSON
  得到的
  
 - OHHTTPStubsProtocol 拦截 HTTP 请求
-- OHHTTPStubs 单例管理 OHHTTPStubsDescriptor 实例
+- OHHTTPStubs 单例管理 HTTPStubsDescriptor 实例
 - OHHTTPStubsResponse 伪造 HTTP 响应
 - 一些辅助功能
  
@@ -25,17 +25,17 @@ import HandyJSON
  */
 public class InstallHTTPStubs: NSObject
 {
-    var installStubs:OHHTTPStubsDescriptor?
+    var installStubs:HTTPStubsDescriptor?
     
     // 激活模拟器
     public class func activateHttpStub()
     {
         //
-        OHHTTPStubs.onStubActivation { (request, stubDesc, response) in
+         HTTPStubs.onStubActivation { (request: URLRequest, stub: HTTPStubsDescriptor, response: HTTPStubsResponse) in
             //
-            print("[OHHTTPStubs] Request to \(request.url) has been stubbed with \(stubDesc.name)")
+            print("[OHHTTPStubs] Request to \(request.url!) has been stubbed with \(stub.name)")
         }
-        OHHTTPStubs.setEnabled(true)
+        HTTPStubs.setEnabled(true)
     }
     
     
@@ -66,12 +66,12 @@ public class InstallHTTPStubs: NSObject
         let jsonData = fileToJSON(plist: imagePath!)
         
         //封装响应包
-        installStubs = OHHTTPStubs.stubRequests(passingTest: { (request:URLRequest) -> Bool in
+        installStubs = HTTPStubs.stubRequests(passingTest: { (request:URLRequest) -> Bool in
             //
             return request.url?.host == ""
-        }, withStubResponse: { (request:URLRequest) -> OHHTTPStubsResponse in
+        }, withStubResponse: { (request:URLRequest) -> HTTPStubsResponse in
             //
-            let response = OHHTTPStubsResponse.init(jsonObject: jsonData, statusCode: 200, headers: ["Content-Type":"application/json"])
+            let response = HTTPStubsResponse.init(jsonObject: jsonData, statusCode: 200, headers: ["Content-Type":"application/json"])
             return response
         })
         
